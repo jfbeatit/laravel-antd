@@ -8,6 +8,6 @@ class TestController extends Controller
 {
     public function __invoke()
     {
-        return Inertia::render('Index')->with('msg', 'hello, world');
+        return Inertia::render('Index')->with('msg', 'Laravel with React');
     }
 }
