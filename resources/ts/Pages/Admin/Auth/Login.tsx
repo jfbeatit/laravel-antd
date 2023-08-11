@@ -3,6 +3,7 @@ import { Button, Checkbox, Col, Form, Input, Row, Watermark } from "antd";
 import { Link, router, usePage } from "@inertiajs/react";
 import { StyleProvider } from "@ant-design/cssinjs";
 import { LockOutlined, SafetyOutlined, UserOutlined } from "@ant-design/icons";
+import Copyright from "../../../Components/Copyright";
 
 export default function ({ captcha }: { captcha: string }): React.ReactElement {
     const { appName } = usePage<{ appName: string }>().props;
@@ -11,7 +12,7 @@ export default function ({ captcha }: { captcha: string }): React.ReactElement {
         <Watermark content={appName}>
             <main className="w-screen h-screen flex justify-center items-center">
                 <div className="w-4/12 h-3/5 bg-gray-200 shadow-2xl rounded-lg flex flex-col items-center justify-center">
-                    <h1 className="text-3xl">用户登录</h1>
+                    <h1 className="text-3xl">{appName}</h1>
                     <Form className="mt-8 w-10/12">
                         <Row>
                             <Col span={24}>
@@ -127,6 +128,7 @@ export default function ({ captcha }: { captcha: string }): React.ReactElement {
                     </Form>
                 </div>
             </main>
+            <Copyright />
         </Watermark>
     );
 }
