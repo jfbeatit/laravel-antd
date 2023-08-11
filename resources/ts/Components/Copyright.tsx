@@ -5,7 +5,7 @@ const Copyright: React.FC = () => {
     const { appName } = usePage<{ appName: string }>().props;
 
     return (
-        <footer className="w-full h-10 absolute bottom-3 text-center">
+        <footer className="w-full h-10 absolute bottom-0 text-center">
             <Typography.Text type="secondary">
                 Copyright © 2023 {appName} all rights reserved
             </Typography.Text>
