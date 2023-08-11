@@ -18,5 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', TestController::class);
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('auth/login', [AuthController::class, 'login'])->name('admin.auth.login');
+    Route::get('auth/login', [AuthController::class, 'showLoginForm'])->name('admin.auth.login');
+    Route::post('auth/login', [AuthController::class, 'login']);
 });
