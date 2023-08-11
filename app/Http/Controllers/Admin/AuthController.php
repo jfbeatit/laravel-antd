@@ -27,10 +27,18 @@ class AuthController extends Controller
         ]);
         if (Auth::attempt(Arr::except($credentials, 'captcha'), $request->remember ?? false)) {
             $request->session()->regenerate();
-            return redirect()->intended('/');
+            return redirect()->intended('/admin/orders');
         }
         return back()->withErrors([
             'email' => '用户名或密码错误',
         ])->onlyInput('email');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/admin/auth/login');
     }
 }
