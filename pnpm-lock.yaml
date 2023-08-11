@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@ant-design/cssinjs': ^1.16.2
+  '@ant-design/icons': ^5.2.5
   '@inertiajs/react': ^1.0.9
   '@types/react': ^18.2.14
   '@types/react-dom': ^18.2.6
@@ -16,6 +18,8 @@ specifiers:
   vite: ^4.4.2
 
 dependencies:
+  '@ant-design/cssinjs': 1.16.2_biqbaboplfbrettd7655fr4n2y
+  '@ant-design/icons': 5.2.5_biqbaboplfbrettd7655fr4n2y
   '@inertiajs/react': 1.0.10_react@18.2.0
   antd: 5.8.2_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
