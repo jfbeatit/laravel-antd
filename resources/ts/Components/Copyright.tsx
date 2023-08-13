@@ -7,7 +7,7 @@ const Copyright: React.FC = () => {
     return (
         <footer className="w-full h-10 absolute bottom-0 text-center">
             <Typography.Text type="secondary">
-                Copyright © 2023 {appName} all rights reserved
+                Copyright © 2023 {appName} All Rights Reserved
             </Typography.Text>
         </footer>
     );
